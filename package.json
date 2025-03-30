@@ -1,0 +1,52 @@
+{
+  "name": "epub-saver",
+  "version": "1.0.0",
+  "description": "A Lyric Utils",
+  "main": "./dist/epub-saver.js",
+  "module": "./dist/epub-saver.mjs",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && vite build && tsc --emitDeclarationOnly --project tsconfig.build.json && tsc-alias --project tsconfig.build.json"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/epub-saver.js",
+      "default": "./dist/epub-saver.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Folltoshe/epub-saver.git"
+  },
+  "keywords": [
+    "epub"
+  ],
+  "author": "Folltoshe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Folltoshe/epub-saver/issues"
+  },
+  "homepage": "https://github.com/Folltoshe/epub-saver#readme",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/lodash": "^4.17.4",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.7",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "moment": "^2.30.1"
+  }
+}
